@@ -14,7 +14,7 @@ export default function GetHero() {
     const fetchHeroes = async (e) => {
         axios.get(`https://superheroapi.com/api/910406413624867/${e}`,
             {
-                headers: { 'Content-Type': 'application/json' }
+                headers: { "Access-Control-Allow-Origin": "*" }
             }
         )
             .then(function (res) {
