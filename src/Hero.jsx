@@ -10,6 +10,7 @@ export default function Hero({ heroName, heroImg, publisher }) {
                     <p className="card-text">Publisher: {publisher}</p>
                 </div>
             </div>
+
         </div >
     )
 }
