@@ -12,7 +12,15 @@ export default function GetHero() {
     // }
 
     const fetchHeroes = async (e) => {
-        axios.get(`https://superheroapi.com/api/910406413624867/${e}`)
+        axios.get(`https://superheroapi.com/api/910406413624867/${e}`,
+            {
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                    'Access-Control-Allow-Headers': 'Content-Type',
+                }
+            }
+        )
             .then(function (res) {
                 setHero(res.data)
             })
